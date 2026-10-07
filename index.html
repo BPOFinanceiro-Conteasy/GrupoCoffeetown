@@ -183,7 +183,7 @@ td.num { text-align:right; font-variant-numeric: tabular-nums; font-weight:600; 
       <p>Departamento Financeiro — Relatório Gerencial</p>
     </div>
   </div>
-  <div class="topbar-period" id="periodBadge">Junho, Julho e Agosto / 2026</div>
+  <div class="topbar-period" id="periodBadge">Junho, Julho, Agosto e Setembro / 2026</div>
 </div>
 
 <div class="main-tabs" id="mainTabs">
@@ -297,7 +297,7 @@ td.num { text-align:right; font-variant-numeric: tabular-nums; font-weight:600; 
     </div>
   </div>
 
-  <div class="footer-note">ContEasy Gestão Contábil · Relatório gerado a partir dos dados do Departamento Financeiro (01/06/2026 a 31/08/2026)</div>
+  <div class="footer-note">ContEasy Gestão Contábil · Relatório gerado a partir dos dados do Departamento Financeiro (01/06/2026 a 30/09/2026)</div>
 </div>
 
 <div class="wrap" id="indicadoresView" style="display:none">
@@ -305,7 +305,7 @@ td.num { text-align:right; font-variant-numeric: tabular-nums; font-weight:600; 
   <div class="section">
     <div class="section-head">
       <h2>Indicadores de Acompanhamento</h2>
-      <span class="hint">Percentuais sobre a Receita Bruta · Junho, Julho, Agosto e Acumulado</span>
+      <span class="hint">Percentuais sobre a Receita Bruta · Junho, Julho, Agosto, Setembro e Acumulado</span>
     </div>
     <div class="card" style="overflow-x:auto">
       <table id="indicatorTable" class="indicator-table"></table>
@@ -322,133 +322,11 @@ td.num { text-align:right; font-variant-numeric: tabular-nums; font-weight:600; 
     </div>
   </div>
 
-  <div class="footer-note">ContEasy Gestão Contábil · Relatório gerado a partir dos dados do Departamento Financeiro (01/06/2026 a 31/08/2026)</div>
+  <div class="footer-note">ContEasy Gestão Contábil · Relatório gerado a partir dos dados do Departamento Financeiro (01/06/2026 a 30/09/2026)</div>
 </div>
 
 <script>
-const DATA = {"months": ["Jun", "Jul", "Ago"], "months_full": ["Junho", "Julho", "Agosto"], "available_months": 3,
-"companies": {
-"consolidado": {"name":"Grupo Coffeetown (Consolidado)", "cnpj":"Coffeetown Riomar + Coffeetown Recife",
-  "receita_bruta":[544131.49, 533824.98, 531600.77],
-  "receita_channels":[
-    {"label":"Maquininha Rede", "months":[443906.91, 424562.65, 437310.32]},
-    {"label":"Pix", "months":[63633.08, 77168.93, 68267.48]},
-    {"label":"Vouchers", "months":[21305.30, 17813.77, 17652.57]},
-    {"label":"Espécie/Depósito", "months":[9000.00, 8128.72, 3900.00]},
-    {"label":"Ifood", "months":[4032.39, 4628.52, 3845.06]},
-    {"label":"Tuna Pagamentos", "months":[2253.81, 1422.39, 625.34]},
-    {"label":"Estornos e Devoluções", "months":[0, 100.00, 0]}
-  ],
-  "custos_operacionais":[-155752.93, -138889.81, -139321.26],
-  "custos_categorias":[
-    {"label":"Fornecedores", "months":[-143962.65, -129351.84, -130328.00]},
-    {"label":"Embalagens", "months":[-11790.28, -7977.00, -8793.26]},
-    {"label":"Fretes", "months":[0, -199.97, -200.00]},
-    {"label":"Custos produto vendido (Excluída)", "months":[0, -1361.00, 0]}
-  ],
-  "despesas_total":[-307950.61, -296872.18, -300463.89],
-  "despesas_categorias":[
-    {"label":"Despesas de Pessoal", "months":[-112866.94, -115069.80, -106945.87]},
-    {"label":"Despesas com Imóvel", "months":[-67494.93, -63181.55, -66442.50]},
-    {"label":"Impostos sobre Vendas e Serviços", "months":[-54156.99, -48075.53, -55025.03]},
-    {"label":"Despesas Comerciais", "months":[-20671.44, -18354.99, -12488.67]},
-    {"label":"Despesas com Infraestrutura e Conservação", "months":[-17904.41, -10004.76, -16256.39]},
-    {"label":"Despesas Administrativas", "months":[-11582.19, -12333.29, -19738.79]},
-    {"label":"Despesas com Sócios", "months":[-12001.42, -12001.42, -11931.40]},
-    {"label":"Despesas Financeiras", "months":[-10472.55, -10563.07, -9332.50]},
-    {"label":"Outras Despesas", "months":[-799.74, -547.28, -2302.74]},
-    {"label":"Rescisões", "months":[0, -6740.49, 0]}
-  ],
-  "resultado":[80427.95, 98062.99, 91815.62],
-  "distribuicao_lucros":[-60300.00, -54600.00, -53300.00],
-  "moveis_equipamentos":[-4659.84, -4833.64, -5939.67],
-  "aluguel_condominio":[-67155.23, -63031.65, -66292.60],
-  "emprestimos_obtidos":[254500.00, 97000.00, 109000.00],
-  "emprestimos_pagos":[-229775.30, -107252.80, -136286.34],
-  "atividade_financiamento":[24724.70, -10252.80, -27286.34],
-  "maquina_bruto":[482222.38, 0, 549582.12], "maquina_taxa":[-8772.30, 0, -10064.83], "maquina_liquido":[400355.44, 0, 437244.34],
-  "maquina_vendas":[9268, 0, 8999], "maquina_cancelamentos":[-15262.49, 0, -16589.19], "maquina_voucher":[18569.69, 0, 20945.62]
-},
-"riomar": {"name":"Coffeetown Riomar (WL Café Ltda)", "cnpj":"WL Café Ltda",
-  "receita_bruta":[278888.93, 270048.99, 258226.33],
-  "receita_channels":[
-    {"label":"Rede - Maquineta", "months":[228002.45, 218148.14, 213194.28]},
-    {"label":"Pix", "months":[29528.31, 36042.64, 29642.51]},
-    {"label":"Vouchers", "months":[10214.27, 8580.22, 8581.96]},
-    {"label":"Espécie/Depósito", "months":[7250.00, 3250.00, 3900.00]},
-    {"label":"Ifood", "months":[2341.60, 3283.76, 2907.58]},
-    {"label":"Tuna Pagamentos", "months":[1552.30, 644.23, 0]},
-    {"label":"Estornos e Devoluções", "months":[0, 100.00, 0]}
-  ],
-  "custos_operacionais":[-63655.04, -59412.33, -54474.04],
-  "custos_categorias":[
-    {"label":"Fornecedores", "months":[-58084.72, -54471.55, -49840.28]},
-    {"label":"Embalagens", "months":[-5570.32, -3579.78, -4433.76]},
-    {"label":"Custos produto vendido (Excluída)", "months":[0, -1361.00, 0]},
-    {"label":"Fretes", "months":[0, 0, -200.00]}
-  ],
-  "despesas_total":[-141472.45, -133923.14, -147467.65],
-  "despesas_categorias":[
-    {"label":"Despesas de Pessoal", "months":[-56389.33, -51500.55, -53494.59]},
-    {"label":"Despesas com Imóvel", "months":[-34640.68, -33259.59, -35370.29]},
-    {"label":"Impostos sobre Vendas e Serviços", "months":[-24273.10, -21734.50, -26906.92]},
-    {"label":"Despesas com Infraestrutura e Conservação", "months":[-8926.67, -4681.63, -8675.33]},
-    {"label":"Despesas Comerciais", "months":[-6919.77, -9034.78, -4250.00]},
-    {"label":"Despesas Administrativas", "months":[-6258.70, -6374.02, -12321.73]},
-    {"label":"Despesas com Sócios (Pró-Labore)", "months":[-2885.38, -2885.38, -2848.00]},
-    {"label":"Despesas Financeiras", "months":[-893.12, -4452.69, -2215.17]},
-    {"label":"Outras Despesas", "months":[-285.70, 0, -1385.62]}
-  ],
-  "resultado":[73761.44, 76713.52, 56284.64],
-  "distribuicao_lucros":[-46400.00, -50600.00, -32300.00],
-  "moveis_equipamentos":[0, 0, 0],
-  "aluguel_condominio":[-34450.88, -33259.59, -35370.29],
-  "emprestimos_obtidos":[0, 0, 0],
-  "emprestimos_pagos":[-6543.57, 0, -5075.88],
-  "atividade_financiamento":[-6543.57, 0, -5075.88],
-  "maquina_bruto":[236928.67, 0, 266798.34], "maquina_taxa":[-4241.66, 0, -4987.60], "maquina_liquido":[194716.13, 0, 213194.28],
-  "maquina_vendas":[4720, 0, 4345], "maquina_cancelamentos":[-8844.09, 0, -8433.33], "maquina_voucher":[8865.92, 0, 10385.00]
-},
-"recife": {"name":"Coffeetown Recife (Mendonças Café Ltda)", "cnpj":"Mendonças Café Ltda",
-  "receita_bruta":[265242.56, 263775.99, 273374.44],
-  "receita_channels":[
-    {"label":"Maquineta - Rede", "months":[215904.46, 206414.51, 224116.04]},
-    {"label":"Pix", "months":[34104.77, 41126.29, 38624.97]},
-    {"label":"Vouchers", "months":[11091.03, 9233.55, 9070.61]},
-    {"label":"Espécie/Depósito", "months":[1750.00, 4878.72, 0]},
-    {"label":"Ifood", "months":[1690.79, 1344.76, 937.48]},
-    {"label":"Tuna Pagamentos", "months":[701.51, 778.16, 625.34]}
-  ],
-  "custos_operacionais":[-92097.89, -79477.48, -84847.22],
-  "custos_categorias":[
-    {"label":"Fornecedores", "months":[-85877.93, -74880.29, -80487.72]},
-    {"label":"Embalagens", "months":[-6219.96, -4397.22, -4359.50]},
-    {"label":"Fretes", "months":[0, -199.97, 0]}
-  ],
-  "despesas_total":[-166478.16, -162949.04, -152996.24],
-  "despesas_categorias":[
-    {"label":"Despesas de Pessoal", "months":[-56477.61, -63569.25, -53451.28]},
-    {"label":"Despesas com Imóvel", "months":[-32854.25, -29921.96, -31072.21]},
-    {"label":"Impostos sobre Vendas e Serviços", "months":[-29883.89, -26341.03, -28118.11]},
-    {"label":"Despesas Comerciais", "months":[-13751.67, -9320.21, -8238.67]},
-    {"label":"Despesas com Sócios", "months":[-9116.04, -9116.04, -9083.40]},
-    {"label":"Despesas com Infraestrutura e Conservação", "months":[-8977.74, -5323.13, -7581.06]},
-    {"label":"Despesas Financeiras", "months":[-9579.43, -6110.38, -7117.33]},
-    {"label":"Despesas Administrativas", "months":[-5323.49, -5959.27, -7417.06]},
-    {"label":"Outras Despesas", "months":[-514.04, -547.28, -917.12]},
-    {"label":"Rescisões", "months":[0, -6740.49, 0]}
-  ],
-  "resultado":[6666.51, 21349.47, 35530.98],
-  "distribuicao_lucros":[-13900.00, -4000.00, -21000.00],
-  "moveis_equipamentos":[-4659.84, -4833.64, -5939.67],
-  "aluguel_condominio":[-32704.35, -29772.06, -30922.31],
-  "emprestimos_obtidos":[254500.00, 97000.00, 109000.00],
-  "emprestimos_pagos":[-223231.73, -107252.80, -131210.46],
-  "atividade_financiamento":[31268.27, -10252.80, -22210.46],
-  "maquina_bruto":[245293.71, 0, 282783.78], "maquina_taxa":[-4530.64, 0, -5077.23], "maquina_liquido":[205639.31, 0, 224050.06],
-  "maquina_vendas":[4548, 0, 4654], "maquina_cancelamentos":[-6418.40, 0, -8155.86], "maquina_voucher":[9703.77, 0, 10560.62]
-}
-}};
+const DATA = {"months": ["Jun", "Jul", "Ago", "Set"], "months_full": ["Junho", "Julho", "Agosto", "Setembro"], "available_months": 4, "companies": {"consolidado": {"name": "Grupo Coffeetown (Consolidado)", "cnpj": "Coffeetown Riomar + Coffeetown Recife", "receita_bruta": [544131.49, 533824.98, 531600.77, 514009.17], "receita_channels": [{"label": "Maquininha Rede", "months": [443906.91, 424562.65, 437310.32, 426401.97]}, {"label": "Pix", "months": [63633.08, 77168.93, 68267.48, 60644.85]}, {"label": "Vouchers", "months": [21305.3, 17813.77, 17652.57, 19266.67]}, {"label": "Espécie/Depósito", "months": [9000.0, 8128.72, 3900.0, 2250.0]}, {"label": "Ifood", "months": [4032.39, 4628.52, 3845.06, 4676.72]}, {"label": "Tuna Pagamentos", "months": [2253.81, 1422.39, 625.34, 768.96]}, {"label": "Estornos e Devoluções", "months": [0, 100.0, 0, 0]}], "custos_operacionais": [-155752.93, -138889.81, -139321.26, -140200.79], "custos_categorias": [{"label": "Fornecedores", "months": [-143962.65, -129351.84, -130328.0, -129482.01]}, {"label": "Embalagens", "months": [-11790.28, -7977.0, -8793.26, -9054.78]}, {"label": "Fretes", "months": [0, -199.97, -200.0, -250.0]}, {"label": "Custos produto vendido (Excluída)", "months": [0, -1361.0, 0, -1414.0]}], "despesas_total": [-307950.61, -296872.18, -300463.89, -319183.36], "despesas_categorias": [{"label": "Despesas de Pessoal", "months": [-112866.94, -115069.8, -106945.87, -133630.33]}, {"label": "Despesas com Imóvel", "months": [-67494.93, -63181.55, -66442.5, -66303.28]}, {"label": "Impostos sobre Vendas e Serviços", "months": [-54156.99, -48075.53, -55025.03, -54248.06]}, {"label": "Despesas Comerciais", "months": [-20671.44, -18354.99, -12488.67, -14310.29]}, {"label": "Despesas com Infraestrutura e Conservação", "months": [-17904.41, -10004.76, -16256.39, -13681.57]}, {"label": "Despesas Administrativas", "months": [-11582.19, -12333.29, -19738.79, -15436.46]}, {"label": "Despesas com Sócios", "months": [-12001.42, -12001.42, -11931.4, -11931.4]}, {"label": "Despesas Financeiras", "months": [-10472.55, -10563.07, -9332.5, -8416.31]}, {"label": "Outras Despesas", "months": [-799.74, -547.28, -2302.74, -1225.66]}, {"label": "Rescisões", "months": [0, -6740.49, 0, 0]}], "resultado": [80427.95, 98062.99, 91815.62, 54625.02], "distribuicao_lucros": [-60300.0, -54600.0, -53300.0, -51100.0], "moveis_equipamentos": [-4659.84, -4833.64, -5939.67, -6615.37], "aluguel_condominio": [-67155.23, -63031.65, -66292.6, -66153.38], "emprestimos_obtidos": [254500.0, 97000.0, 109000.0, 131500.0], "emprestimos_pagos": [-229775.3, -107252.8, -136286.34, -129893.14], "atividade_financiamento": [24724.7, -10252.8, -27286.34, 1606.86], "maquina_bruto": [482222.38, 0, 549582.12, 492985.26], "maquina_taxa": [-8772.3, 0, -10064.83, -8996.96], "maquina_liquido": [400355.44, 0, 437244.34, 426254.37], "maquina_vendas": [9268, 0, 8999, 8216], "maquina_cancelamentos": [-15262.49, 0, -16589.19, -13044.01], "maquina_voucher": [18569.69, 0, 20945.62, 20574.23]}, "riomar": {"name": "Coffeetown Riomar (WL Café Ltda)", "cnpj": "WL Café Ltda", "receita_bruta": [278888.93, 270048.99, 258226.33, 259999.84], "receita_channels": [{"label": "Rede - Maquineta", "months": [228002.45, 218148.14, 213194.28, 214362.51]}, {"label": "Pix", "months": [29528.31, 36042.64, 29642.51, 29011.06]}, {"label": "Vouchers", "months": [10214.27, 8580.22, 8581.96, 10784.03]}, {"label": "Espécie/Depósito", "months": [7250.0, 3250.0, 3900.0, 2250.0]}, {"label": "Ifood", "months": [2341.6, 3283.76, 2907.58, 3302.57]}, {"label": "Tuna Pagamentos", "months": [1552.3, 644.23, 0, 289.67]}, {"label": "Estornos e Devoluções", "months": [0, 100.0, 0, 0]}], "custos_operacionais": [-63655.04, -59412.33, -54474.04, -56463.79], "custos_categorias": [{"label": "Fornecedores", "months": [-58084.72, -54471.55, -49840.28, -50977.74]}, {"label": "Embalagens", "months": [-5570.32, -3579.78, -4433.76, -3822.05]}, {"label": "Custos produto vendido (Excluída)", "months": [0, -1361.0, 0, -1414.0]}, {"label": "Fretes", "months": [0, 0, -200.0, -250.0]}], "despesas_total": [-141472.45, -133923.14, -147467.65, -156878.83], "despesas_categorias": [{"label": "Despesas de Pessoal", "months": [-56389.33, -51500.55, -53494.59, -65006.79]}, {"label": "Despesas com Imóvel", "months": [-34640.68, -33259.59, -35370.29, -34244.47]}, {"label": "Impostos sobre Vendas e Serviços", "months": [-24273.1, -21734.5, -26906.92, -25565.64]}, {"label": "Despesas com Infraestrutura e Conservação", "months": [-8926.67, -4681.63, -8675.33, -8703.27]}, {"label": "Despesas Comerciais", "months": [-6919.77, -9034.78, -4250.0, -4250.0]}, {"label": "Despesas Administrativas", "months": [-6258.7, -6374.02, -12321.73, -13175.72]}, {"label": "Despesas com Sócios (Pró-Labore)", "months": [-2885.38, -2885.38, -2848.0, -2848.0]}, {"label": "Despesas Financeiras", "months": [-893.12, -4452.69, -2215.17, -2071.72]}, {"label": "Outras Despesas", "months": [-285.7, 0, -1385.62, -1013.22]}], "resultado": [73761.44, 76713.52, 56284.64, 46657.22], "distribuicao_lucros": [-46400.0, -50600.0, -32300.0, -41600.0], "moveis_equipamentos": [0, 0, 0, 0], "aluguel_condominio": [-34450.88, -33259.59, -35370.29, -34244.47], "emprestimos_obtidos": [0, 0, 0, 0], "emprestimos_pagos": [-6543.57, 0, -5075.88, -5102.35], "atividade_financiamento": [-6543.57, 0, -5075.88, -5102.35], "maquina_bruto": [236928.67, 0, 266798.34, 247260.77], "maquina_taxa": [-4241.66, 0, -4987.6, -4576.38], "maquina_liquido": [194716.13, 0, 213194.28, 214241.89], "maquina_vendas": [4720, 0, 4345, 4070], "maquina_cancelamentos": [-8844.09, 0, -8433.33, -6567.13], "maquina_voucher": [8865.92, 0, 10385.0, 11666.92]}, "recife": {"name": "Coffeetown Recife (Mendonças Café Ltda)", "cnpj": "Mendonças Café Ltda", "receita_bruta": [265242.56, 263775.99, 273374.44, 254009.33], "receita_channels": [{"label": "Maquineta - Rede", "months": [215904.46, 206414.51, 224116.04, 212039.46]}, {"label": "Pix", "months": [34104.77, 41126.29, 38624.97, 31633.79]}, {"label": "Vouchers", "months": [11091.03, 9233.55, 9070.61, 8482.64]}, {"label": "Espécie/Depósito", "months": [1750.0, 4878.72, 0, 0]}, {"label": "Ifood", "months": [1690.79, 1344.76, 937.48, 1374.15]}, {"label": "Tuna Pagamentos", "months": [701.51, 778.16, 625.34, 479.29]}], "custos_operacionais": [-92097.89, -79477.48, -84847.22, -83737.0], "custos_categorias": [{"label": "Fornecedores", "months": [-85877.93, -74880.29, -80487.72, -78504.27]}, {"label": "Embalagens", "months": [-6219.96, -4397.22, -4359.5, -5232.73]}, {"label": "Fretes", "months": [0, -199.97, 0, 0]}], "despesas_total": [-166478.16, -162949.04, -152996.24, -162304.53], "despesas_categorias": [{"label": "Despesas de Pessoal", "months": [-56477.61, -63569.25, -53451.28, -68623.54]}, {"label": "Despesas com Imóvel", "months": [-32854.25, -29921.96, -31072.21, -32058.81]}, {"label": "Impostos sobre Vendas e Serviços", "months": [-29883.89, -26341.03, -28118.11, -28682.42]}, {"label": "Despesas Comerciais", "months": [-13751.67, -9320.21, -8238.67, -10060.29]}, {"label": "Despesas com Sócios", "months": [-9116.04, -9116.04, -9083.4, -9083.4]}, {"label": "Despesas com Infraestrutura e Conservação", "months": [-8977.74, -5323.13, -7581.06, -4978.3]}, {"label": "Despesas Financeiras", "months": [-9579.43, -6110.38, -7117.33, -6344.59]}, {"label": "Despesas Administrativas", "months": [-5323.49, -5959.27, -7417.06, -2260.74]}, {"label": "Outras Despesas", "months": [-514.04, -547.28, -917.12, -212.44]}, {"label": "Rescisões", "months": [0, -6740.49, 0, 0]}], "resultado": [6666.51, 21349.47, 35530.98, 7967.8], "distribuicao_lucros": [-13900.0, -4000.0, -21000.0, -9500.0], "moveis_equipamentos": [-4659.84, -4833.64, -5939.67, -6615.37], "aluguel_condominio": [-32704.35, -29772.06, -30922.31, -31908.91], "emprestimos_obtidos": [254500.0, 97000.0, 109000.0, 131500.0], "emprestimos_pagos": [-223231.73, -107252.8, -131210.46, -124790.79], "atividade_financiamento": [31268.27, -10252.8, -22210.46, 6709.21], "maquina_bruto": [245293.71, 0, 282783.78, 245724.49], "maquina_taxa": [-4530.64, 0, -5077.23, -4420.58], "maquina_liquido": [205639.31, 0, 224050.06, 212012.48], "maquina_vendas": [4548, 0, 4654, 4146], "maquina_cancelamentos": [-6418.4, 0, -8155.86, -6476.88], "maquina_voucher": [9703.77, 0, 10560.62, 8907.31]}}};
 
 const MONTHS = DATA.months;
 const MONTHS_FULL = DATA.months_full;
@@ -478,7 +356,8 @@ function findCategory(categorias, label) {
 const MONTH_META = [
   {num:'06', lastDay:'30'}, // Junho
   {num:'07', lastDay:'31'}, // Julho
-  {num:'08', lastDay:'31'}  // Agosto
+  {num:'08', lastDay:'31'}, // Agosto
+  {num:'09', lastDay:'30'}  // Setembro
 ];
 
 function periodLabel() {
